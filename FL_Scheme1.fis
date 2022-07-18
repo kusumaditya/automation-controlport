@@ -1,0 +1,63 @@
+[System]
+Name='FL_Scheme1'
+Type='mamdani'
+Version=2.0
+NumInputs=5
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='port_util'
+Range=[0 100]
+NumMFs=3
+MF1='low':'trapmf',[0 0 20 40]
+MF2='middle':'trapmf',[20 45 65 80]
+MF3='high':'trapmf',[60 80 100 100]
+
+[Input2]
+Name='number_conn'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input3]
+Name='min_bw'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Input4]
+Name='ct'
+Range=[0 24]
+NumMFs=7
+MF1='mf1':'trimf',[-10 0 10]
+MF2='mf2':'gaussmf',[4.247 12]
+MF3='mf3':'trimf',[14 24 34]
+MF4='mf4':'trimf',[-8 0 8]
+MF5='mf5':'trimf',[0 8 16]
+MF6='mf6':'trimf',[8 16 24]
+MF7='mf7':'trimf',[16 24 32]
+
+[Input5]
+Name='cd'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='number_port'
+Range=[0 8]
+NumMFs=0
+
+[Rules]

@@ -1,0 +1,10 @@
+matplotlib
+openpyxl==3.0.9
+paramiko
+scikit-fuzzy
+numpy
+req
+selenium
+netaddr
+telnetlib
+telnetlib3
